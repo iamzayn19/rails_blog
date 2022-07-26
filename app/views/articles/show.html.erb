@@ -5,18 +5,7 @@
 <%= link_to "Destroy", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <h2> Comments </h2>
-<% @article.comments.each do |comment| %>
-<p>
-    <strong> Commenter: </strong>
-    <%= comment.commenter %>
-</p>
-
-<p>
-    <strong> Body: </strong>
-    <%= comment.body %>
-</p>
-
-<% end %>
+<%= render @article.comments %>
 
 <h2> Add a comment </h2>
 
